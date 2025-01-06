@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800">
+    <!-- 背景 -->
+    <rect width="1400" height="800" fill="#1E293B" />
+    
+    <!-- 顶部工具栏 -->
+    <g id="top-toolbar">
+        <rect x="0" y="0" width="1400" height="40" fill="#0F172A" />
+        <g id="file-operations" transform="translate(10,5)">
+            <!-- 文件操作按钮 -->
+            <rect x="0" y="0" width="60" height="30" rx="4" fill="#3B82F6" />
+            <text x="30" y="20" fill="white" font-size="12" text-anchor="middle">保存</text>
+            
+            <rect x="70" y="0" width="60" height="30" rx="4" fill="#3B82F6" />
+            <text x="100" y="20" fill="white" font-size="12" text-anchor="middle">导入</text>
+            
+            <rect x="140" y="0" width="60" height="30" rx="4" fill="#3B82F6" />
+            <text x="170" y="20" fill="white" font-size="12" text-anchor="middle">导出</text>
+        </g>
+        
+        <g id="view-controls" transform="translate(250,5)">
+            <!-- 视图控制 -->
+            <rect x="0" y="0" width="60" height="30" rx="4" fill="#4B5563" />
+            <text x="30" y="20" fill="white" font-size="12" text-anchor="middle">缩放+</text>
+            
+            <rect x="70" y="0" width="60" height="30" rx="4" fill="#4B5563" />
+            <text x="100" y="20" fill="white" font-size="12" text-anchor="middle">缩放-</text>
+            
+            <rect x="140" y="0" width="60" height="30" rx="4" fill="#4B5563" />
+            <text x="170" y="20" fill="white" font-size="12" text-anchor="middle">适应</text>
+        </g>
+    </g>
+    
+    <!-- 左侧指令面板 -->
+    <g id="left-panel">
+        <rect x="0" y="40" width="250" height="760" fill="#1F2937" />
+        
+        <!-- 搜索框 -->
+        <rect x="10" y="50" width="230" height="30" rx="4" fill="#374151" />
+        <text x="30" y="70" fill="#9CA3AF" font-size="12">搜索指令...</text>
+        
+        <!-- 指令分类 -->
+        <g id="command-categories" transform="translate(0,90)">
+            <!-- 公共指令 -->
+            <g class="category">
+                <rect x="0" y="0" width="250" height="40" fill="#2D3748" />
+                <text x="20" y="25" fill="white" font-size="14">📋 公共指令</text>
+                
+                <g class="commands" transform="translate(10,45)">
+                    <rect x="0" y="0" width="230" height="30" rx="4" fill="#4A5568" />
+                    <text x="20" y="20" fill="white" font-size="12">延时</text>
+                </g>
+            </g>
+            
+            <!-- 逻辑指令 -->
+            <g class="category" transform="translate(0,120)">
+                <rect x="0" y="0" width="250" height="40" fill="#2D3748" />
+                <text x="20" y="25" fill="white" font-size="14">🔄 逻辑指令</text>
+                
+                <g class="commands" transform="translate(10,45)">
+                    <rect x="0" y="0" width="230" height="30" rx="4" fill="#4A5568" />
+                    <text x="20" y="20" fill="white" font-size="12">IF条件</text>
+                </g>
+            </g>
+            
+            <!-- 运动指令 -->
+            <g class="category" transform="translate(0,240)">
+                <rect x="0" y="0" width="250" height="40" fill="#2D3748" />
+                <text x="20" y="25" fill="white" font-size="14">⚡ 运动指令</text>
+                
+                <g class="commands" transform="translate(10,45)">
+                    <rect x="0" y="0" width="230" height="30" rx="4" fill="#4A5568" />
+                    <text x="20" y="20" fill="white" font-size="12">点位运动</text>
+                </g>
+            </g>
+        </g>
+    </g>
+    
+    <!-- 中间画板区域 -->
+    <g id="canvas">
+        <rect x="250" y="40" width="850" height="760" fill="#111827" />
+        
+        <!-- 网格背景 -->
+        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1F2937" stroke-width="0.5"/>
+        </pattern>
+        <rect x="250" y="40" width="850" height="760" fill="url(#grid)" />
+        
+        <!-- 示例流程列表 -->
+        <g class="process-list" transform="translate(270,60)">
+            <rect width="200" height="300" rx="4" fill="#1F2937" />
+            <rect width="200" height="30" rx="4" fill="#2D3748" />
+            <text x="10" y="20" fill="white" font-size="14">流程 #1</text>
+            
+            <!-- 流程控制按钮 -->
+            <g transform="translate(140,5)">
+                <circle cx="10" cy="10" r="8" fill="#10B981" />
+                <circle cx="30" cy="10" r="8" fill="#EF4444" />
+            </g>
+            
+            <!-- 示例指令 -->
+            <g transform="translate(10,40)">
+                <rect width="180" height="40" rx="4" fill="#374151" />
+                <text x="10" y="25" fill="white" font-size="12">延时操作</text>
+            </g>
+        </g>
+    </g>
+    
+    <!-- 右侧Tab面板 -->
+    <g id="right-panel">
+        <rect x="1100" y="40" width="300" height="760" fill="#1F2937" />
+        
+        <!-- Tab按钮 -->
+        <g id="tabs" transform="translate(1100,40)">
+            <rect x="0" y="0" width="150" height="30" fill="#3B82F6" />
+            <text x="75" y="20" fill="white" font-size="12" text-anchor="middle">报警&日志</text>
+            
+            <rect x="150" y="0" width="150" height="30" fill="#1F2937" />
+            <text x="225" y="20" fill="white" font-size="12" text-anchor="middle">属性</text>
+        </g>
+        
+        <!-- 报警日志区域 -->
+        <g id="alarm-log" transform="translate(1110,80)">
+            <rect width="280" height="710" rx="4" fill="#111827" />
+            
+            <!-- 示例报警信息 -->
+            <g transform="translate(10,10)">
+                <rect width="260" height="40" rx="4" fill="#DC2626" fill-opacity="0.2" />
+                <text x="10" y="25" fill="#DC2626" font-size="12">报警: 轴1位置超限</text>
+            </g>
+            
+            <!-- 示例日志信息 -->
+            <g transform="translate(10,60)">
+                <rect width="260" height="40" rx="4" fill="#374151" />
+                <text x="10" y="25" fill="#9CA3AF" font-size="12">14:30:15 流程1启动</text>
+            </g>
+        </g>
+    </g>
+    
+    <!-- 右键菜单示例 -->
+    <g id="context-menu" transform="translate(500,200)" opacity="0">
+        <rect width="150" height="120" rx="4" fill="#374151" />
+        <text x="10" y="25" fill="white" font-size="12">创建新流程</text>
+        <text x="10" y="55" fill="white" font-size="12">删除流程</text>
+        <text x="10" y="85" fill="white" font-size="12">复制流程</text>
+    </g>
+</svg>
